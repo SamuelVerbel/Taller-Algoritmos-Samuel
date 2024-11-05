@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class SistemaLogin {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String usuario = "usuario", contrasena = "1234";
+        int intentos = 3;
+
+        while (intentos > 0) {
+            System.out.print("Ingrese usuario: ");
+            String inputUsuario = scanner.next();
+            System.out.print("Ingrese contraseña: ");
+            String inputContrasena = scanner.next();
+
+            if (inputUsuario.equals(usuario) && inputContrasena.equals(contrasena)) {
+                System.out.println("Login exitoso");
+                break;
+            } else {
+                intentos--;
+                System.out.println("Datos incorrectos. Intentos restantes: " + intentos);
+                if (intentos == 0) {
+                    System.out.println("Intentos Excedidos");
+                }
+            }
+        }
+    }
+}
