@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class PagosHipoteca {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el capital del préstamo: ");
+        double capital = scanner.nextDouble();
+
+        System.out.print("Ingrese la tasa de interés anual (%): ");
+        double tasaInteresAnual = scanner.nextDouble();
+
+        System.out.print("Ingrese el número de años: ");
+        int anos = scanner.nextInt();
+
+        int numPagos = anos * 12;
+        double tasaInteresMensual = tasaInteresAnual / 100 / 12;
+        double cuotaMensual = (capital * tasaInteresMensual) / 
+                (1 - Math.pow(1 + tasaInteresMensual, -numPagos));
+        
+        double totalPagar = cuotaMensual * numPagos;
+
+        System.out.println("Pago mensual: " + cuotaMensual);
+        System.out.println("Total a pagar: " + totalPagar);
+    }
+}
