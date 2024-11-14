@@ -1,6 +1,5 @@
 import java.util.Scanner;
-
-public class RegistroVenta {
+public class Ejercicio_3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double neto = 0;
@@ -15,7 +14,7 @@ public class RegistroVenta {
                 neto += precio * cantidad;
             } else {
                 System.out.println("Ingrese valores positivos.");
-                i--; // repetir este producto en caso de valor incorrecto
+                i--;
             }
         }
 
@@ -36,5 +35,6 @@ public class RegistroVenta {
         } else {
             System.out.println("Descuento o IVA fuera de los límites permitidos.");
         }
+        scanner.close();
     }
 }
