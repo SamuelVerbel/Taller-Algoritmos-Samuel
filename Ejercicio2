@@ -8,11 +8,16 @@ public class Ejercicio_2 {
 
         while (true) {
             System.out.print("Ingrese el precio del producto: ");
-            double precio = scanner.nextDouble();
-            if (precio == -1) break;
+            int precio = scanner.nextInt();
+            if (precio <= 0) {
+                break;
+            }
 
             System.out.print("Ingrese la cantidad del producto: ");
             int cantidad = scanner.nextInt();
+            if (cantidad <= 0) {
+                break;
+            }
 
             if (precio > 0 && cantidad > 0) {
                 double resultado = precio * cantidad;
