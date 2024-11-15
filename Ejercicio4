@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NotasEstudiantes {
+public class Ejemplo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int aprobados = 0, reprobados = 0, sobresalientes = 0;
@@ -21,5 +21,6 @@ public class NotasEstudiantes {
         System.out.println("Estudiantes aprobados: " + aprobados);
         System.out.println("Estudiantes reprobados: " + reprobados);
         System.out.println("Estudiantes sobresalientes: " + sobresalientes);
+        scanner.close();
     }
 }
